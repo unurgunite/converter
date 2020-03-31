@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div class="sidebar">
+    <h2>Sidebar</h2>
+    <ul>
+      <% @list.each do |linkName| %>
+        <% @favicon.each do |className| %>
+          <%= content_tag(:li) do %>
+            <%= link_to "#" do %>
+              <%= linkName %>
+              <%= content_tag(:i, nil, class: ["fas", className]) %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>
