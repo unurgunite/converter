@@ -8,28 +8,26 @@ RSpec.describe 'Pages', type: :request do
     end
   end
 
-  context 'Check navbar' do
-    it 'should have a navbar', js: true do
-      page.should have_selector('ul')
+  context 'All pages' do
+    it 'should have a navbar' do
+      # expect(root_url).to have_selector('ul')
       [main].each do |page|
         visit page
-        expect(page).to have_content('li')
+        expect(page).to have_selector('ul')
       end
+      # [main].each do |page|
+      #   get page
+      #   expect(page).to have_selector('li')
+      # end
+    end
+  end
 
-      it 'should have the images' do
-        page.should have_css('img', text: 'image1.jpg')
-      end
-
-      it 'should have the favicon' do
-        page.should have_xpath("/html/head/link[@href='favicon.ico']")
+  context 'JavaScript library' do
+    it 'loads favicon' do
+      [main].each do |page|
+        get page
+        expect(page).to have_css('.fas')
       end
     end
   end
 end
-
-context 'Load JavaScript library' do
-  it 'loads favicon' do
-
-  end
-end
-
