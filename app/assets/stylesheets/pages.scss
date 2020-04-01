@@ -1,0 +1,130 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+//colors
+$color_athens_gray_approx: #f3f5f9;
+$color_mulled_wine_approx: #4b4276;
+$white: #fff;
+$color_lavender_gray_approx: #bdb8d7;
+$black_5: rgba(0, 0, 0, 0.05);
+$white_5: rgba(255, 255, 255, 0.05);
+$color_victoria_approx: #594f8d;
+$color_dove_gray_approx: #717171;
+
+//fonts
+$font_0: Open Sans;
+$font_1: sans-serif;
+
+//urls
+//$url_0: url(https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap);
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: $font_0, $font_1;
+}
+
+body {
+  background-color: $color_athens_gray_approx;
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
+
+  .sidebar {
+    width: 200px;
+    height: 100%;
+    background: $color_mulled_wine_approx;
+    padding: 30px 0;
+    position: fixed;
+
+    h2 {
+      color: $white;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .social_media {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: translateX(-50%);
+      display: flex;
+
+      a {
+        display: block;
+        width: 40px;
+        background: $color_victoria_approx;
+        height: 40px;
+        line-height: 45px;
+        text-align: center;
+        margin: 0 5px;
+        color: $color_lavender_gray_approx;
+        //Instead of the line below you could use @include border-top-left-radius($radius)
+        border-top-left-radius: 5px;
+        //Instead of the line below you could use @include border-top-right-radius($radius)
+        border-top-right-radius: 5px;
+      }
+    }
+
+    ul li {
+      padding: 15px;
+      border-bottom: 1px solid $color_lavender_gray_approx;
+      border-bottom: 1px solid $black_5;
+      border-top: 1px solid $white_5;
+
+      a {
+        color: $color_lavender_gray_approx;
+        display: block;
+
+        .fas {
+          width: 25px;
+        }
+      }
+
+      &:hover {
+        background-color: $color_victoria_approx;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .main_content {
+    width: 100%;
+    margin-left: 200px;
+
+    .header {
+      padding: 20px;
+      background: $white;
+      color: $color_dove_gray_approx;
+      border-bottom: 1px solid $color_athens_gray_approx;
+    }
+
+    .info {
+      margin: 20px;
+      color: $color_dove_gray_approx;
+      line-height: 25px;
+
+      div {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media(max-height: 500px) {
+  .social_media {
+    display: none !important;
+  }
+}
