@@ -25,8 +25,6 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 # Better errors
 gem 'better_errors', '~> 2.1', '>= 2.1.1'
-# Meta-tags helper
-gem 'meta-tags'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
