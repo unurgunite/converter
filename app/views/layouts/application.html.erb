@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Converter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'https://kit.fontawesome.com/4488cf4bf2.js', crossorigin: 'anonymous' %>
+  </head>
+
+  <body>
+    <%= render 'others/navbar' %>
+    <%= yield %>
+  </body>
+</html>
