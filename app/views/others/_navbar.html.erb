@@ -11,5 +11,12 @@
         <% end %>
       <% end %>
     </ul>
+    <div class="social_media">
+      <% PagesHelper::SOCIAL.each do |n| %>
+        <%= link_to "#" do %>
+          <%= content_tag(:i, nil, class: ["fab", n]) %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
