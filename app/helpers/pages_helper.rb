@@ -8,4 +8,8 @@ module PagesHelper
     'Weight': 'fa-weight-hanging',
     'Time': 'fa-clock'
   }.freeze
+
+  SOCIAL = %w[fa-facebook-f fa-twitter fa-instagram].freeze
+
+  LINKS = %w[root number length weight time].freeze
 end
