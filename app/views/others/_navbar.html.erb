@@ -2,11 +2,12 @@
   <div class="sidebar">
     <h2>Sidebar</h2>
     <ul>
-      <% PagesHelper::FAVICON.each do |linkName, className| %>
+
+      <% PagesHelper::FAVICON.each do |n| %>
         <%= content_tag(:li) do %>
-          <%= link_to "#" do %>
-            <%= linkName %>
-            <%= content_tag(:i, nil, class: ["fas", className]) %>
+          <%= link_to n[:path] do %>
+            <%= n[:link_name] %>
+            <%= content_tag(:i, nil, class: ["fas", n[:class_name]]) %>
           <% end %>
         <% end %>
       <% end %>
