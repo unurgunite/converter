@@ -1,0 +1,4 @@
+Contact: senpaiguru1488@gmail.com
+Acknowledgments: https://example.com/hall-of-thank.html
+Preferred-Languages: en, ru, jp
+Canonical: https://www.example.com/security.txt
