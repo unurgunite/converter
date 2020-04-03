@@ -11,7 +11,7 @@ module PagesHelper
   }.freeze
 =end
 
-  FAVICON = [{ 'link_name': 'Home page', 'class_name': '', 'path': 'root' },
+  FAVICON = [{ 'link_name': 'Home page', 'class_name': 'fa-home', 'path': 'root' },
              { 'link_name': 'Number system', 'class_name': 'fa-sort-numeric-down-alt', 'path': 'number' },
              { 'link_name': 'Length', 'class_name': 'fa-ruler-vertical', 'path': 'length' },
              { 'link_name': 'Weight', 'class_name': 'fa-weight-hanging', 'path': 'weight' },
