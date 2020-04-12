@@ -17,7 +17,7 @@ module PagesHelper
              { 'link_name': 'Weight', 'class_name': 'fa-weight-hanging', 'path': 'weight' },
              { 'link_name': 'Time', 'class_name': 'fa-clock', 'path': 'time' }].freeze
 
-  SOCIAL = %w[fa-facebook-f fa-twitter fa-instagram fa-telegram].freeze
+  SOCIAL = %w[fa-facebook-f fa-instagram fa-telegram].freeze
 
   # LINKS = %w[root number length weight time].freeze
 end
