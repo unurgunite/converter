@@ -17,6 +17,6 @@ module PagesHelper
 
   SOCIAL = %w[fa-facebook-f fa-instagram fa-telegram].freeze
 
-  INPUT = [{ 'name': %w[binary decimal] }].freeze
+  INPUT = %w[binary decimal].freeze
   # LINKS = %w[root number length weight time].freeze
 end

@@ -1,3 +1,3 @@
 <% PagesHelper::INPUT.each do |n| %>
-  <%= text_field_tag n[:name], nil, placeholder: "Enter a #{n[:name]} number..." %>
+  <%= text_field_tag n, nil, placeholder: "Enter a #{n} number..." %>
 <% end %>
