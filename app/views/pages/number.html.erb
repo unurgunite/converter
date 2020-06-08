@@ -1,1 +1,6 @@
-<%= text_field_tag 'search', nil, placeholder: 'Enter search term...' %>
+<% PagesHelper::INPUT.each do |n| %>
+  <%= text_field_tag n, nil, placeholder: "Enter a #{n} number...", autocomplite: 'off', required: true %>
+  <%= label_tag n, class: 'label-name' do %>
+    <%= content_tag(:span, "#{n.capitalize} number", class: 'content-name') %>
+  <% end %>
+<% end %>

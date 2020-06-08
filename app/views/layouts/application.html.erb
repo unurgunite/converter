@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Converter</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= render 'others/meta' %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'https://kit.fontawesome.com/4488cf4bf2.js', crossorigin: 'anonymous' %>
-  </head>
+<head>
+  <title>Converter</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= render 'others/meta' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'https://kit.fontawesome.com/4488cf4bf2.js', crossorigin: 'anonymous' %>
+</head>
 
-  <body>
-    <%= render 'others/navbar' %>
-    <div class="form">
-      <%= yield %>
-    </div>
-  </body>
+<body>
+<%= render 'others/navbar' %>
+<% if home_index? %>
+  <%= yield %>
+<% else %>
+  <div class="form">
+    <%= yield %>
+  </div>
+<% end %>
+</body>
 </html>
