@@ -33,6 +33,39 @@ body {
   background-color: $color_athens_gray_approx;
 }
 
+.form {
+  width: 50%;
+  position: relative;
+  height: 50px;
+
+  input {
+    width: 50%;
+    height: 100%;
+    margin: 2% 0 10px 50%;
+    padding: 12px 4px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    transition: 0.2s;
+
+    &:focus, &:hover {
+      box-shadow: 5px 5px 1px 1px rgba(0, 0, 255, 0.2);
+    }
+
+    &:first-child {
+      margin-top: 100px;
+    }
+  }
+
+  label {
+
+  }
+}
+
 .wrapper {
   display: flex;
   position: relative;
